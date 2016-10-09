@@ -37,7 +37,7 @@ def HasSomeoneWon():
 		PrintBoard()
 		quit()
 		
-def ValidateAndPlay(turn, XorO): #Check if the cell is empty. If so play and return "False". Otherwise, return, "True." This is "Model" section.
+def ValidateAndPlay(turn, XorO): #Check if the cell is empty. If so play and return "False". Otherwise, return, "True." (Model Section)
 	global a1, a2, a3, b1, b2, b3, c1, c2, c3
 	if turn == str('a1') and a1 == " - ": #validate that cell is empty
 		a1 = XorO
@@ -69,7 +69,7 @@ def ValidateAndPlay(turn, XorO): #Check if the cell is empty. If so play and ret
 	else:
 		return True
 
-def HumanTurn(): #input a cell from player (Control section.)
+def HumanTurn(): #input a cell from player (Control Section)
 	playing = True
 	while playing == True:
 		global a1, a2, a3, b1, b2, b3, c1, c2, c3
@@ -82,7 +82,7 @@ def HumanTurn(): #input a cell from player (Control section.)
 		if ValidateAndPlay(turn, " X ") == False:
 			playing = False
 		
-#This function has a while loop that generates a random number between 1 and 9, checks if the corresponding spot on the board is empty, then plays if the spots available. If it's not available, it generates another random number and tries again. Model section.
+#This function has a while loop that generates a random number between 1 and 9, checks if the corresponding spot on the board is empty, then plays if the spots available. If it's not available, it generates another random number and tries again. (Model Section)
 
 def ComputerTurn(): 
 	playing = True
@@ -122,7 +122,7 @@ def gameinit():
 	c1 = " - "
 	c2 = " - "
 	c3 = " - "
-	
+
 def main():
 	gameinit()
 	print("Welcome to Tic Tac Toe!")
